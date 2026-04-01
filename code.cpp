@@ -147,12 +147,10 @@ int main() {
             cin >> x;
             cout << str3[x] << '\n';
         }
-        cout << str2.get_len() << " " << str3.get_len() << '\n';
         cout << (int)(str2 < str3) << '\n';
         str2.ADD(str3);
         str2.out(); puts("");
         // cout << str2 << endl;
-        cout << str2.get_len() << '\n';
     }
     return 0;
 }
