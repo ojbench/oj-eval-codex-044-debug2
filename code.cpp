@@ -1,4 +1,6 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
+#include <cstdio>
 using namespace std;
 
 class mystring {
@@ -79,7 +81,7 @@ public:
     }
 
     bool operator<(const mystring &rhs) const {
-        int n = min(len, rhs.len);
+        int n = (len < rhs.len ? len : rhs.len);
         for (int i = 0; i < n; ++i) {
             if (ch[i] != rhs.ch[i]) return ch[i] < rhs.ch[i];
         }
@@ -147,6 +149,7 @@ int main() {
             cin >> x;
             cout << str3[x] << '\n';
         }
+        cout << str2.get_len() << " " << str3.get_len() << '\n';
         cout << (int)(str2 < str3) << '\n';
         str2.ADD(str3);
         str2.out(); puts("");
